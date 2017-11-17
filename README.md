@@ -5,5 +5,4 @@ The script is only tested on Ubuntu, pretty sure this should work for all Linux 
 Feel free to fork and add more support for other OS.
 
 ## Usage:
------
 sudo ./changeMAC.sh
