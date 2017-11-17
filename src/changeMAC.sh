@@ -18,9 +18,9 @@ curr_mac=`ip link | grep -v lo | grep "link" | sed -e 's/^[[:space:]]*//g' | cut
 echo "Current mac address is: ${curr_mac}"
 echo "Shutting down interface ${interface_name}"
 
-ifconfig ${interface_name} down
-ifconfig ${interface_name} hw ether ${new_mac}
-ifconfig ${interface_name} up
+sudo ifconfig ${interface_name} down
+sudo ifconfig ${interface_name} hw ether ${new_mac}
+sudo ifconfig ${interface_name} up
 
 echo "Resetting network manager to fill routing table, please wait..."
 sudo /etc/init.d/network-manager restart
